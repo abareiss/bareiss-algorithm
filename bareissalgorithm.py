@@ -1,11 +1,11 @@
 # input is a n-square matrix represented by list of lists. # returns the determinant of the inputted matrix as a float. 
 def bareissalgorithm(matrix: list[list]) -> float: 
-    int n = len(matrix) # the matrix dimension
+    n = len(matrix) # the matrix dimension
 
     if n <=0:
         return 0
     
-    float sign = 1
+    sign = 1
 
     for k in range(n-2):
         if matrix[k][k] == 0:
@@ -21,7 +21,7 @@ def bareissalgorithm(matrix: list[list]) -> float:
             
 
         for i in range(k+1, n-1):
-            for j in range(k+1, dim-1):
+            for j in range(k+1, n-1):
                 matrix[i][j] = matrix[k][k] * matrix[i][j] - matrix[i][k] * matrix[k][i]
                 if k!= 0:
                     matrix[i][j] /= matrix[k-1][k-1]
