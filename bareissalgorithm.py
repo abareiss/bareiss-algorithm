@@ -28,5 +28,5 @@ def bareissalgorithm(matrix: list[list]) -> float:
 
     return sign*matrix[n-1][n-1]
 
-
+# resources used: https://en.wikipedia.org/wiki/Bareiss_algorithm, https://cs.stackexchange.com/questions/124759/determinant-calculation-bareiss-vs-gauss-algorithm
 
